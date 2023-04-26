@@ -28,7 +28,6 @@ try:
 except NoSuchElementException as err:
     print(f"NoSuchElementException: {err}")
     pass
-driver.implicitly_wait(3)
 set_range_dropdown = driver.find_element(By.CLASS_NAME, "nav-results-page_label_3G3MB")
 set_range_dropdown.click()
 select_range_options = driver.find_elements(By.CLASS_NAME, "location-select_rangebutton_2c4VW")
@@ -36,7 +35,6 @@ hundred_mile_range_option = select_range_options[3]
 hundred_mile_range_option.click()
 select_update_range_btn = driver.find_element(By.CLASS_NAME, "location-select_button_39oXs")
 select_update_range_btn.click()
-driver.implicitly_wait(3)
 # https://www.bmwusa.com/inventory/results?Series=3&InteriorColor=Black&Option=S07M9&ExteriorColor=Black&FuelType=X
 # This finds a black 330e with the shadowline package
 driver.get("https://www.bmwusa.com/inventory/results?Series=3&Option=S07M9&ExteriorColor=Black&FuelType=X")
